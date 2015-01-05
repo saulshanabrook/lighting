@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/saulshanabrook/lighting.svg?branch=master)](https://travis-ci.org/saulshanabrook/lighting)
 # Lighting
 *Sorry I couldn't think of a better name*.
 
