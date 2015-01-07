@@ -13,20 +13,32 @@ type Modifier interface {
 	Modify(previous, current *DimmerMap, level Level)
 }
 
+
+
 type Level interface {
 	GetPercent() float
 }
+
+type LevelModifier struct {
+	Modifier
+	Level
+}
+
+
 
 type System interface {
 	DimmersAt() DimmerMap
 }
 
 type LevelledSystem struct {
-	Modifier
-	Level
+	LevelModifier
 	System
 }
 
 func (ls *LevelledSystem) DimmersAt() (dm DimmerMap) {
 	ls.Level.float
+}
+
+type DirectLevel struct {
+	float 
 }
