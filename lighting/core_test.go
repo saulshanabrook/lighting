@@ -70,3 +70,35 @@ func TestStateStack(t *testing.T) {
 	})
 
 }
+
+func TestDimmer(t *testing.T) {
+
+	Convey("When it is valid", t, func() {
+
+		Convey("DimmersAt should be just that dimmer", func() {
+			dimmers, err := Dimmer{1, 50}.DimmersAt()
+			assertNoError(err)
+			So(dimmers, ShouldResemble, DimmerMap{1: 50})
+		})
+	})
+
+	Convey("When level is too high", t, func() {
+
+		Convey("Should return an error", func() {
+			_, err := Dimmer{1, 200}.DimmersAt()
+			So(err, ShouldNotBeNil)
+
+		})
+
+	})
+
+	Convey("When level is too low", t, func() {
+
+		Convey("Should return an error", func() {
+			_, err := Dimmer{1, -1}.DimmersAt()
+			So(err, ShouldNotBeNil)
+
+		})
+
+	})
+}
