@@ -89,3 +89,9 @@ to look at this cue later, it is obvious what we wanted to do. If we had set
 it to an absolute level instead, we would have to do some more digging, before
 we knew what we were trying to do. Also, if we have and modify `Warm Indoor`
 later, it will still be a bit cooler in this scene.
+
+If we include `+@` it would also make sense to have `-@`, `*@`, and `/@`. 
+
+So we have to make sure of a few things. First that these only work with the
+numeric type of levels. It doesn't make sense (so shouldn't be allowed) to
++=

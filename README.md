@@ -28,13 +28,18 @@ The system should only maintain/show/record the most abstract information to rep
   *  It is fast.
   *  It is fun.
   *  I want to learn it.
+  *  Our project looks like it is right in it's [sweet spot](http://www.reddit.com/r/golang/comments/29ua55/rust_or_go/ciojqcg)
+    * fast
+    * concurrent
+    * not super low level, but not a CMS either
 *  Use [Gobot](http://gobot.io/).
   * Guys working on it are awesome.
   * Give back to OS community.
   * Tie our project into larger picture.
 * Use [Annyang](https://www.talater.com/annyang/) to recognize speech input.
 * Have server running Go code. That has a USB to DMX out. Also has an HTTP API server that talks to web apps/iPhone apps (on local network).
-
+* Maybe use [Gopherjs](http://www.gopherjs.org/) for frontend as well. Would remove a lot of potential code duplication
+  * need something like meteorjs for go, so that state can be updated between backend and frontend
 
 ## Implementation
 This project will actually requie many smaller subprojects to make it up.
