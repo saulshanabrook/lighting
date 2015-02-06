@@ -9,6 +9,21 @@ so anything slower than this is too slow. I want to aim for < 50ms for our test,
 which gives the backend 150ms to do other things when it get's more complicated.
 
 
+- [Backend Language](#)
+    - [Go](#)
+- [Backend Web Framework (if using Python)](#)
+    - [Falcon](#)
+    - [Flask](#)
+    - [Django](#)
+- [Communication Protocal](#)
+    - [HTTP](#)
+- [Frontend System](#)
+    - [Web](#)
+- [Frontend Language (if creating app for web)](#)
+    - [Javascript](#)
+- [Frontend Web Framework (if using JS for frontend)](#)
+    - [AngularJS (1.x)](#)
+
 
 ## Backend Language
 ### Go
