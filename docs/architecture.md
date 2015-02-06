@@ -112,7 +112,7 @@ Cons
 * can't use JS client frameworks
 
 ## Frontend Web Framework (if using JS for frontend)
-# [AngularJS](https://angularjs.org/) (1.x)
+### [AngularJS](https://angularjs.org/) (1.x)
 Pros
 * lots of examples, libraries
 * battle tested
@@ -121,7 +121,7 @@ Pros
 Cons
 * hard to know best way to do things/where to put code
 * not hot/new (2.0 coming out soon)
-# [polymer](https://www.polymer-project.org/)
+### [polymer](https://www.polymer-project.org/)
 Pros
 * built on future web standards
 * different conceptual model (web components) that could potentially improve abstractions
@@ -130,7 +130,7 @@ Cons
 * not in production much
 * not as many tutorial on how to use it
 * would run into more rough patches
-# [React](http://facebook.github.io/react/) ([or other flux](https://github.com/voronianski/flux-comparison)) + [friends](https://tuxedojs.org/)
+### [React](http://facebook.github.io/react/) ([or other flux](https://github.com/voronianski/flux-comparison)) + [friends](https://tuxedojs.org/)
 Pros
 * New
 * Facebook uses it (?)
