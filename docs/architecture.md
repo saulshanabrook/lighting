@@ -26,9 +26,9 @@ which gives the backend 150ms to do other things when it get's more complicated.
 	- [GopherJS (if using Go for backend)](#)
 - [Frontend Web Framework (if using JS for frontend)](#)
 	- [AngularJS (1.x)](#)
+	- [AngularJS (2.x)](#)
 	- [polymer](#)
 	- [React (or other flux) + friends](#)
-
 
 ## Backend Language
 ### Go
@@ -83,6 +83,15 @@ which gives the backend 150ms to do other things when it get's more complicated.
 *Cons*
 * slow
 * huge
+
+### [uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/WebSockets.html)
+*Pros*
+* websockets support
+* bare bones
+* so fast?
+
+*cons*
+* doesnt give you much for free
 
 ## Communication Protocal
 [HTTP vs Websockts on stack overflow](http://stackoverflow.com/questions/14703627/websockets-protocol-vs-http)
@@ -164,6 +173,15 @@ which gives the backend 150ms to do other things when it get's more complicated.
 *Cons*
 * hard to know best way to do things/where to put code
 * not hot/new (2.0 coming out soon)
+
+### [AngularJS](https://angularjs.io/) (2.x)
+
+*Pros*
+* new
+* good ideas behind
+
+*Cons*
+* beta
 
 ### [polymer](https://www.polymer-project.org/)
 
