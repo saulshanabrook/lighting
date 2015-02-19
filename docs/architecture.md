@@ -27,83 +27,98 @@ which gives the backend 150ms to do other things when it get's more complicated.
 
 ## Backend Language
 ### Go
-Pros
+*Pros*
 * Fast
 * Type safe
 * simple language design
 * exciting new tooling
 * built in concurrency support
 * easy to deploy (one static binary)
-Cons
+
+*Cons*
 * Greater learning curve
 * sometimes forced design decisions might lead to more verbose code
 * less library support (serial)
+
 ### Python
-Pros
+*Pros*
 * Very familiar with language
 * Great library support
 * PyPy is rather fast
 * Fast to prototype ideas
 * mature web frameworks
-Cons
+
+*Cons*
 * Could be too slow response times
 * not type safe -> requires more testing
 
 ## Backend Web Framework (if using Python)
 ### [Falcon](http://falconframework.org/)
-Pros
+*Pros*
 * seems to be the fastest
 * actively developed
-Cons
+
+*Cons*
 * not as much plugin support
 
 ### [Flask](http://flask.pocoo.org/)
-Pros
+*Pros*
 * relatively fast
 * lots of tutorial/support
-Cons
+
+*Cons*
 * not as fast as it could be
 
 ### [Django](https://www.djangoproject.com/)
-Pros
+*Pros*
 * well designed layout of code
 * lots of library support for creating API
 * lots of testing support
-Cons
+
+*Cons*
 * slow
 * huge
 
 ## Communication Protocal
 [HTTP vs Websockts on stack overflow](http://stackoverflow.com/questions/14703627/websockets-protocol-vs-http)
 ### HTTP
-Pros
+
+*Pros*
 * Supported by all web frameworks
 * Easy to test
 * simple model to understand
-Cons
+
+*Cons*
 * potentially more latency
+
 ### Websockets
-Pros
+
+*Pros*
 * lower latency
-Cons
+
+*Cons*
 * not suported by all web frameworks
 * harder to unit test
 
 
 ## Frontend System
 ### Web
-Pros
+
+*Pros*
 * compatible on all devices (phones, computers)
 * lots of open source tooling
 * can do integration testing
-Cons
+
+*Cons*
 * harder to make nice looking UI
 * potentially slower
 ### Mobile
-Pros
+
+*Pros*
 * better UI
 * ??
-Cons
+
+*Cons*
 * would have to develop for multiple devices
 * harder to deploy
 
@@ -111,47 +126,57 @@ Cons
 
 ## Frontend Language (if creating app for web)
 ### Javascript
-Pros
+
+*Pros*
 * faster
 * less abstraction -> less leaky abstraction
 * easy support for many libraries
-Cons
+
+*Cons*
 * duplicate backend code
 * not fun language
 ### [GopherJS](http://www.gopherjs.org/) (if using Go for backend)
-Pros
+
+*Pros*
 * reduce duplication between client and server
 * cleaner code
-Cons
+
+*Cons*
 * potentially slower
 * can't use JS client frameworks
 
 ## Frontend Web Framework (if using JS for frontend)
 ### [AngularJS](https://angularjs.org/) (1.x)
-Pros
+
+*Pros*
 * lots of examples, libraries
 * battle tested
 * fast enough
 * strong design model
-Cons
+
+*Cons*
 * hard to know best way to do things/where to put code
 * not hot/new (2.0 coming out soon)
 ### [polymer](https://www.polymer-project.org/)
-Pros
+
+*Pros*
 * built on future web standards
 * different conceptual model (web components) that could potentially improve abstractions
 * easy to create stand alone elements
-Cons
+
+*Cons*
 * not in production much
 * not as many tutorial on how to use it
 * would run into more rough patches
 ### [React](http://facebook.github.io/react/) ([or other flux](https://github.com/voronianski/flux-comparison)) + [friends](https://tuxedojs.org/)
-Pros
+
+*Pros*
 * New
 * Facebook uses it (?)
 * people are tired of angular and moving to this
 * potentially faster rendering because of virtual DOm
-Cons
+
+*Cons*
 * steeper learning curve (i dont know it)
 * not as many examples
 * too many libraries to choose from to combine it with
