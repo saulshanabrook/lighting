@@ -9,21 +9,6 @@ so anything slower than this is too slow. I want to aim for < 50ms for our test,
 which gives the backend 150ms to do other things when it get's more complicated.
 
 
-- [Backend Language](#)
-    - [Go](#)
-- [Backend Web Framework (if using Python)](#)
-    - [Falcon](#)
-    - [Flask](#)
-    - [Django](#)
-- [Communication Protocal](#)
-    - [HTTP](#)
-- [Frontend System](#)
-    - [Web](#)
-- [Frontend Language (if creating app for web)](#)
-    - [Javascript](#)
-- [Frontend Web Framework (if using JS for frontend)](#)
-    - [AngularJS (1.x)](#)
-
 
 ## Backend Language
 ### Go
@@ -112,6 +97,7 @@ which gives the backend 150ms to do other things when it get's more complicated.
 *Cons*
 * harder to make nice looking UI
 * potentially slower
+
 ### Mobile
 
 *Pros*
@@ -135,6 +121,7 @@ which gives the backend 150ms to do other things when it get's more complicated.
 *Cons*
 * duplicate backend code
 * not fun language
+
 ### [GopherJS](http://www.gopherjs.org/) (if using Go for backend)
 
 *Pros*
@@ -157,6 +144,7 @@ which gives the backend 150ms to do other things when it get's more complicated.
 *Cons*
 * hard to know best way to do things/where to put code
 * not hot/new (2.0 coming out soon)
+
 ### [polymer](https://www.polymer-project.org/)
 
 *Pros*
@@ -168,6 +156,7 @@ which gives the backend 150ms to do other things when it get's more complicated.
 * not in production much
 * not as many tutorial on how to use it
 * would run into more rough patches
+
 ### [React](http://facebook.github.io/react/) ([or other flux](https://github.com/voronianski/flux-comparison)) + [friends](https://tuxedojs.org/)
 
 *Pros*
