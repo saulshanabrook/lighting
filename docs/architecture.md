@@ -8,6 +8,26 @@ I heard from my professor that human's feel like ~200ms is "instant",
 so anything slower than this is too slow. I want to aim for < 50ms for our test,
 which gives the backend 150ms to do other things when it get's more complicated.
 
+- [Backend Language](#)
+	- [Go](#)
+	- [Python](#)
+- [Backend Web Framework (if using Python)](#)
+	- [Falcon](#)
+	- [Flask](#)
+	- [Django](#)
+- [Communication Protocal](#)
+	- [HTTP](#)
+	- [Websockets](#)
+- [Frontend System](#)
+	- [Web](#)
+	- [Mobile](#)
+- [Frontend Language (if creating app for web)](#)
+	- [Javascript](#)
+	- [GopherJS (if using Go for backend)](#)
+- [Frontend Web Framework (if using JS for frontend)](#)
+	- [AngularJS (1.x)](#)
+	- [polymer](#)
+	- [React (or other flux) + friends](#)
 
 
 ## Backend Language
