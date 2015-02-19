@@ -29,7 +29,6 @@ which gives the backend 150ms to do other things when it get's more complicated.
 	- [polymer](#)
 	- [React (or other flux) + friends](#)
 
-
 ## Backend Language
 ### Go
 *Pros*
@@ -83,6 +82,15 @@ which gives the backend 150ms to do other things when it get's more complicated.
 *Cons*
 * slow
 * huge
+
+### [uWSGI](http://uwsgi-docs.readthedocs.org/en/latest/WebSockets.html)
+*Pros*
+* websockets support
+* bare bones
+* so fast?
+
+*cons*
+* doesnt give you much for free
 
 ## Communication Protocal
 [HTTP vs Websockts on stack overflow](http://stackoverflow.com/questions/14703627/websockets-protocol-vs-http)
