@@ -14,7 +14,7 @@ The format to send dimmer info from client to server is JSON like this:
 
 ```json
 {
-    "<dimmer number>": "<level>",
+    <dimmer number>: <level>,
     [...]
 }
 ```
@@ -23,7 +23,7 @@ and then the server should respond with
 
 ```json
 {
-    "<dimmer number>": "<level>",
+    <dimmer number>: <level>,
     [...]}
 ```
 
