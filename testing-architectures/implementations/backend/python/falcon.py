@@ -2,7 +2,7 @@ import json
 
 import falcon
 
-from ._base import set_dimmers
+from ._base import set_dimmers, load_dimmers
 
 
 class RequireJSON(object):
@@ -65,7 +65,7 @@ class ThingsResource:
         set_dimmers(doc)
 
         resp.status = falcon.HTTP_201
-        req.context['result'] = {'status': 'ok'}
+        req.context['result'] = load_dimmers()
 
 # Configure your WSGI server to load "things.app" (app is a WSGI callable)
 app = falcon.API(middleware=[

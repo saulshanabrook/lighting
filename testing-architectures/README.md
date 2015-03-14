@@ -24,7 +24,8 @@ and then the server should respond with
 ```json
 {
     <dimmer number>: <level>,
-    [...]}
+    [...]
+}
 ```
 
 
