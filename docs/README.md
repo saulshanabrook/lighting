@@ -12,7 +12,7 @@
 * Does what we need
 * Extensible (for anyone)
 
-## Core Principles
+# Core Principles
 Lingo:
 
 * **system**: A mapping of lights to levels. The most simple example would be
@@ -304,4 +304,38 @@ numeric type of levels. It doesn't make sense (so shouldn't be allowed) to
 ## Cues
 **TODO**: Try to understand best way of cueing, and different timings needed.
           Look at existing systems out there.
+
+
+# FAQ
+Q: *But the Ios board already has this type of abstraction with Presets and Palletes.*
+
+A: While they do allow this same type of abstraction, it is much harder to setup and 
+   display. The fundamental difference is that they have these abstractions coinciding
+   with channel information. In this system, there are no channels. Also the difference
+   of the stack based system means that it is clearer what the current state
+   is made up of.
+
+Q: *Touchscreens suck.*
+
+A: Yep I agree. Manual sliders are nicer for manual control and channel setting.
+   It is a question of trade offs. The benefit of this system is not that it is
+   digital, but that by starting from scratch we can implement different data
+   schemes. I would love to add support for hardware, or even dedicated hardware,
+   but that is a secondary priority right now.
+
+Q: *This will be less reliable, because it is not on a dedicated machine.*
+
+A: So this is a complicated one to answer, because it's reliability is mainly
+   based on what the codebase looks like and how much use it has gotten. While
+   it will likely be less popular than other systems, there is nothing fundamental
+   stopping it from being just as reliable. I see this as running on a stripped
+   down linux box that only runs this app. The reliability of the system would
+   be comparable to the reliable of any linux based server.
+
+Q: *You can't please everyone, this doesn't address the concerns of x.*
+
+A: Fundamentally I am writing this to scratch *my* itch not yours. I am totally
+   open to other perspectives and wants, as long as they don't fundamentally
+   alter the premise that allows me to get what I want out of it and don't
+   add unneeded complexity.
 
