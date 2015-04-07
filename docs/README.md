@@ -1,7 +1,25 @@
-## Goals
+<!-- TOC depth:6 withLinks:1 updateOnSave:1 -->
+- [Goals](#goals)
+- [Core Principles](#core-principles)
+		- [Everything is a system](#everything-is-a-system)
+		- [Stack Based Precedence](#stack-based-precedence)
+		- [Examples](#examples)
+		- [Reasoning](#reasoning)
+	- [Further ideas](#further-ideas)
+		- [Natural Language Processing](#natural-language-processing)
+		- [UI](#ui)
+		- [Architecture](#architecture)
+		- [Attributes of Instruments](#attributes-of-instruments)
+			- [Non Power Levels](#non-power-levels)
+	- [Modifying Existing Levels](#modifying-existing-levels)
+	- [Cues](#cues)
+- [FAQ](#faq)
+<!-- /TOC -->
+
+# Goals
 
 * Simplicity
-    * UI should be intuiative. If you know lighting, you should be able to walk
+    * UI should be intuitive. If you know lighting, you should be able to walk
       up and start creating.
     * The data structures should be easy to conceptualize and as normalized as
       possible. What I mean by this is if a cue is really just a combination of
@@ -75,26 +93,26 @@ Cue 1 is made from:
 * Top @ 30%
 ```
 
-So all together the final state will be equivelent to top @ 30%, front C @ 25%,
+So all together the final state will be equivalent to top @ 30%, front C @ 25%,
 all front warm besides the USC @ 78%, and the USC front warm @ 30%.
 
 ### Reasoning
 1. It is easy for the operator to answer *why* levels are at where they are.
-2. The stack based approach is anambigious and uniform, eliminating the need
+2. The stack based approach is unambiguous and uniform, eliminating the need
    for capturing or different ordering approaches.
 
 ## Further ideas
-### Natural Language Procesings
+### Natural Language Processing
 [Annyang](https://www.talater.com/annyang/) provides a way to take human typed
-text + speach input and get actions out of it. So you can train it with things
+text + speech input and get actions out of it. So you can train it with things
 like "When I say 'bring up dimmer 10' I want you to do `{system: dimmmer, number: 10, level: 100}`".
 This means we can just add on language processing on top of the standard way of bringing up
 dimmers
 
 * "Bring dimmer 10 up to full"
 * "Record dimmer 10 as USL front warm"
-* "Bring the fron cools to full"
-* "What are the USL fron warms at?"
+* "Bring the front cools to full"
+* "What are the USL front warms at?"
 
 
 ### UI
@@ -106,7 +124,7 @@ Then you can see what it is made up of.
 Also there are a  multiple ways of viewing many of the systems, the human
 readable notation ("US Front") and the actual representation `{position: "up", use: "front"}`.
 I think the human readable should be displayed by default and can be parsed into
-the actual representation, but the more precise notation should be easily accesible
+the actual representation, but the more precise notation should be easily accessible
 if you hover over or click or something.
 
 If you hover over any percentage, or click on it, you should be able to
@@ -146,7 +164,7 @@ file.
 
 ### Attributes of Instruments
 Major complications arise when considering non light emitting outputs, for example
-moving lights, color scrollers, mirros, and gobo spinnners.
+moving lights, color scrollers, mirrors, and gobo spinnners.
 
 While these would all function fine under the above proposed system the workflow
 could be a bit ugly.
@@ -307,7 +325,7 @@ numeric type of levels. It doesn't make sense (so shouldn't be allowed) to
 
 
 # FAQ
-Q: *But the Ios board already has this type of abstraction with Presets and Palletes.*
+Q: *But the Ios board already has this type of abstraction with Presets and Palletts.*
 
 A: While they do allow this same type of abstraction, it is much harder to setup and 
    display. The fundamental difference is that they have these abstractions coinciding
