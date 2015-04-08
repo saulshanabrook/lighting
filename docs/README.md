@@ -1,10 +1,10 @@
 <!-- TOC depth:6 withLinks:1 updateOnSave:1 -->
 - [Goals](#goals)
 - [Core Principles](#core-principles)
-		- [Everything is a system](#everything-is-a-system)
-			- [Filters](#filters)
-				- [Parsing Filters](#parsing-filters)
-		- [Stack Based Precedence](#stack-based-precedence)
+	- [Everything is a system](#everything-is-a-system)
+		- [Filters](#filters)
+			- [Parsing Filters](#parsing-filters)
+	- [Stack Based Precedence](#stack-based-precedence)
 		- [Examples](#examples)
 		- [Reasoning](#reasoning)
 	- [Further ideas](#further-ideas)
@@ -40,7 +40,7 @@ Lingo:
   Palettes, Presets, Cues, Channels, and Groups would all have a component of
   them that was a **system**, even if they stored other information as well.
 
-### Everything is a system
+## Everything is a system
 Types of systems:
 
 * **dimmer**: A single dimmer at a level.
@@ -63,7 +63,7 @@ type System interface {
 }
 ```
 
-#### Filters
+### Filters
 One of the harder systems to figure will be the filters. They represent the
 primary way you will build your looks. Right now I am looking at it as if
 each dimmer has certain attributes, and if we can just write down each
@@ -100,7 +100,7 @@ end up being too complicated for that, but that would be ideal. Then they could
 decide how to interpret positions and all that. 
 
 
-##### Parsing Filters
+#### Parsing Filters
 We also need to figure out how we interpret use input that has a mixing of
 attributes, that are all unlabeled. For example, if the user types in
 "USL Front warm @ full", how do we know what attributes come out of this query?
@@ -124,7 +124,7 @@ couple of options (that I see):
 3. Something for advanced use natural language machine learning.
 
 
-### Stack Based Precedence
+## Stack Based Precedence
 To combine systems you order them in a stack and merge them all together,
 where the top of the stack takes precedence. Later systems that
 are added will have priority.
