@@ -2,6 +2,8 @@
 - [Goals](#goals)
 - [Core Principles](#core-principles)
 		- [Everything is a system](#everything-is-a-system)
+			- [Filters](#filters)
+				- [Parsing Filters](#parsing-filters)
 		- [Stack Based Precedence](#stack-based-precedence)
 		- [Examples](#examples)
 		- [Reasoning](#reasoning)
@@ -61,9 +63,70 @@ type System interface {
 }
 ```
 
+#### Filters
+One of the harder systems to figure will be the filters. They represent the
+primary way you will build your looks. Right now I am looking at it as if
+each dimmer has certain attributes, and if we can just write down each
+of the attributes, then we can query based on them.
+
+This works great for a few things, like whether the light is a Front or Back
+light. I think the best label for that would be **use**.
+
+Then there is the color
+of the lights. I don't mean the actual gel number, but just how you would talk
+about the light, regarding it's color, like *warm*, *cool*, *neutral*, etc.
+This **color** attribute seems to make sense, and I don't see much of a problem
+storing this. However, we also need to think about how this will be displayed.
+For example, you would might/probably wanna see "USL Front W", where "warm"
+is abbreviated.
+
+Another big one is some type of focus position. Like "USL" or "US". As long
+as you don't have more than five zones, we can parse these names. It is really
+two attributes here, the US-DS position and the SL-SR position. Is there a name
+for those two axis? Width and hieght? Horizontal and vertical? I think the best
+thing to do is to store these separately, sort of like storing the x and y
+coordinate. So they would be called something like **position_vertical** and
+**position_horizontal**. However, this assumes some very normalized positions.
+What if you have a special on the "US Couch"? Well I would argue that we need
+a **position** keyword as well, that would hold "couch". I am not sure if 
+**position** is the right word for any of these, maybe **dest_position** or
+**focus_position** is more appropriate. 
+
+This all makes sense in an ideal world, but shows are not going to be like this
+all the time. We need room for flexibility. So obviously these keywords shouldn't
+be fixed. The user needs some way of saying "Hey I actually have my own keywords".
+What would be great is if all this logic could be edited *by* the user. It might
+end up being too complicated for that, but that would be ideal. Then they could
+decide how to interpret positions and all that. 
+
+
+##### Parsing Filters
+We also need to figure out how we interpret use input that has a mixing of
+attributes, that are all unlabeled. For example, if the user types in
+"USL Front warm @ full", how do we know what attributes come out of this query?
+How do we know "warm" is a `color` and "front" is the `use`? Well we have a
+couple of options (that I see):
+
+1. Since we know the patch already, we can go through inputted word and see
+   if it exists in any of the patched attributes. So when tell it "Front",
+   it will look through all the values of every attribute for all lights and
+   see that "Front" appears only as a `use`, so will categorize it like that.
+   Problems would come up if there were the same values present for multiple
+   attributes. Also, could be a bit slow. It's nice that it allows flexible
+   ordering, however. And the speed could be remedied by pre-computing
+   that mapping of attributes values to attribute keys.
+2. We could allow the user to specify a consistent ordering that they use.
+   For example, this could be `position use color`. So then if they wrote
+   "USL front warm", it would know which input words match with which attributes.
+   However, a problem with this design is that it is stricter, so is worse
+   for the user to use. Also, you are going to have optional keywords, so
+   how does it know which ones you input?
+3. Something for advanced use natural language machine learning.
+
+
 ### Stack Based Precedence
 To combine systems you order them in a stack and merge them all together,
-where the top of the stack takes predence. Later systems that
+where the top of the stack takes precedence. Later systems that
 are added will have priority.
 
 ### Examples
