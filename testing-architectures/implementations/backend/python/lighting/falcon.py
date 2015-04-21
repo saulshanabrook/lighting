@@ -1,3 +1,5 @@
+from __future__ import absolute_import
+
 import json
 
 import falcon
@@ -54,7 +56,7 @@ class JSONTranslator(object):
 
 
 class ThingsResource:
-    def on_post(self, req, resp, user_id):
+    def on_post(self, req, resp):
         try:
             doc = req.context['doc']
         except KeyError:

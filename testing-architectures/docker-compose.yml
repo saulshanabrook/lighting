@@ -1,0 +1,23 @@
+benchmarking:
+  build: benchmarking
+  links:
+    - pythonfalcon
+    - pythonflask
+    - pythonflaskws
+  volumes:
+  - benchmarking:/usr/src/app
+pythonfalcon:
+  build: implementations/backend/python
+  dockerfile: falcon.Dockerfile
+  volumes:
+    - implementations/backend/python/:/code/
+pythonflask:
+  build: implementations/backend/python
+  dockerfile: flask.Dockerfile
+  volumes:
+    - implementations/backend/python:/code/
+pythonflaskws:
+  build: implementations/backend/python
+  dockerfile: flask_ws.Dockerfile
+  volumes:
+    - implementations/backend/python:/code/

@@ -1,5 +1,6 @@
-import json
+from __future__ import absolute_import
 
+import json
 
 from flask import Flask, jsonify
 from flask_sockets import Sockets
@@ -16,4 +17,4 @@ def hello(ws):
     while True:
         message = ws.receive()
         set_dimmers(json.loads(message))
-        ws.send(jsonify(**load_dimmers()))
+        ws.send(jsonify(load_dimmers()))
